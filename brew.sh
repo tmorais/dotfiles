@@ -32,6 +32,10 @@ if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
   chsh -s "${BREW_PREFIX}/bin/bash";
 fi;
 
+# Development
+brew install python3
+brew install git-secrets
+
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
@@ -43,8 +47,8 @@ brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
-brew install php
-brew install gmp
+# brew install php
+# brew install gmp
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -53,20 +57,20 @@ brew install sfnt2woff-zopfli
 brew install woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install aircrack-ng
+# brew install aircrack-ng
 brew install bfg
 brew install binutils
 brew install binwalk
 brew install cifer
 brew install dex2jar
 brew install dns2tcp
-brew install fcrackzip
+# brew install fcrackzip
 brew install foremost
-brew install hashpump
-brew install hydra
-brew install john
-brew install knock
-brew install netpbm
+# brew install hashpump
+# brew install hydra
+# brew install john
+# brew install knock
+# brew install netpbm
 brew install nmap
 brew install pngcheck
 brew install socat
