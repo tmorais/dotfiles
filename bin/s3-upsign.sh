@@ -19,15 +19,15 @@ fi
 FILENAME=$(basename $1)
 
 echo "S3 upsigning $1..."
-echo "Destination $S3_TEMP_BUCKET/$FILENAME..."
+echo "Destination $S3_UPSIGN_TEMP_BUCKET/$FILENAME..."
 
-aws s3 cp "$1" "$S3_TEMP_BUCKET"
+aws s3 cp "$1" "$S3_UPSIGN_TEMP_BUCKET"
 if [ $? -ne 0 ]; then
     echo "ERROR: Check your AWS PROFILE"
     exit
 fi
 
-SIGNED_URL=`aws s3 presign "$S3_TEMP_BUCKET/$FILENAME" \
-    --expires-in $(echo $TIME | bc -l)`
+SIGNED_URL=`aws s3 presign "$S3_UPSIGN_TEMP_BUCKET/$FILENAME" \
+    --expires-in $(echo $S3_UPSIGN_EXPIRES_IN | bc -l)`
 
 echo -e "S3 signed URL...\n\n$SIGNED_URL\n\n"
