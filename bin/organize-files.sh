@@ -16,8 +16,16 @@ ext_diag="*.drawio"
 ext_quarantine="*.dmg"
 ext_rdp="*.rdp"
 
+BASEDIR=$(pwd)
+
+echo "Running on $BASEDIR"
+
+cd $BASEDIR
+
 for folder in $folders
 do
+    echo "Organizing $folder"
+
     if [ $folder == 'Compressed' ]
     then
         mkdir -p $folder
