@@ -1,0 +1,9 @@
+# Sample .global_vars file
+
+# Include on .bash_profile or similar 
+# source ~/.global_vars
+
+export REKOG_INDEX_TEMP_BUCKET="my-sandbox-temp-bucket" # don't include prefix s3://
+export S3_UPSIGN_TEMP_BUCKET="s3://my-sandbox-temp-bucket" # INCLUDE prefix s3://
+export REKOG_INDEX_DEFAULT_COLLECTION="my-rekog-coll"
+export S3_UPSIGN_AWS_PROFILE="my-profile"

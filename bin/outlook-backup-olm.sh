@@ -10,7 +10,7 @@ tell application "System Events"
         set {year:y, month:m, day:d} to (current date)
         set theMonthNumber to (m as integer)
         set theExportAsName to "outlook-backup-" & y & "-" & theMonthNumber & ".olm"
-        set theExportToFolder to "/Users/dreis/Desktop"
+        set theExportToFolder to "~/Desktop"
         --input the file name and the destination folder path you want to export as
         tell menu item "Export..." of menu "File" of menu bar item "File" of menu bar 1
             click
